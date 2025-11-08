@@ -16,7 +16,7 @@ export const contactLinks = [
     {
         title:"whatsapp",
         image:whatsapp,
-        path:"https://www.facebook.com/raffi.tharayankandathil/"
+        path:"https://wa.me/919961662827"
 
     },
     {
@@ -34,7 +34,7 @@ export const contactLinks = [
     {
         title:"gmail",
         image:gmail,
-        path:"https://www.facebook.com/raffi.tharayankandathil/"
+        path:"mailto:raffi@sacrosys.com"
 
     },
     {
