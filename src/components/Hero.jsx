@@ -33,7 +33,7 @@ const Hero = () => {
           </h1>
           <img src={logo} alt="logo"  className="h-7 w-auto " />
           <p className=" font-normal font-montserrat text-xs leading-loose  text-center text-[#DDDDDD] ">
-           CEO at Sacrosys Technologies | Digital Transformation Expert IT Solution & Cuber Security 
+           CEO at Sacrosys Technologies | Digital Transformation Expert IT Solution & Cyber Security 
           </p>
 
 
