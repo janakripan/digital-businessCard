@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Contact from "../components/contact";
+import Contact from "../components/Contact";
 import { RiRocketLine, RiTeamLine, RiTrophyLine } from "react-icons/ri";
 import { products, services } from "../constants";
 
