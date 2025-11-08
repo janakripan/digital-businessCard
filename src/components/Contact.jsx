@@ -4,37 +4,41 @@ import { TfiDownload } from 'react-icons/tfi'
 
 const Contact = () => {
 
-  // ✅ Opens “Add to Contacts” on Android & iPhone
-  const downloadVCard = () => {
-    const vcard = `BEGIN:VCARD
+ const saveVCard = () => {
+  const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Raffi Sacrosys
 N:Sacrosys;Raffi;;;
-EMAIL;TYPE=INTERNET:raffi@sacrosys.com
 TEL;TYPE=CELL:+919876543210
+EMAIL:raffi@sacrosys.com
 ORG:Sacrosys
 TITLE:CEO
 END:VCARD`;
 
-    const blob = new Blob([vcard], { type: "text/vcard" });
-    const url = URL.createObjectURL(blob);
+  // ✅ Android needs text/x-vcard (IMPORTANT)
+  const blob = new Blob([vcard], { type: "text/x-vcard" });
 
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "raffisacrosys.vcf"; // IMPORTANT for iPhone
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const url = URL.createObjectURL(blob);
 
-    URL.revokeObjectURL(url);
-  };
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "raffisacrosys.vcf"; // MUST be .vcf or Android will not open Contacts
+  link.style.display = "none";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(url);
+};
+
 
   return (
     <div className="w-full h-fit flex flex-col gap-6 ">
       {/* Save Contact Button */}
       <button
         className="w-full h-fit border-2 border-[#3B82F6] text-[#3B82F6] p-3.5 text-center transition-all duration-200 flex items-center justify-center gap-2 rounded-lg hover:scale-103 active:scale-95 font-poppins text-sm font-semibold drop-shadow-xl"
-        onClick={downloadVCard}
+        onClick={saveVCard}
       >
         <TfiDownload /> Save Contact
       </button>
