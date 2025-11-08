@@ -38,7 +38,8 @@ END:VCARD`;
       {/* Save Contact Button */}
       <button
         className="w-full h-fit border-2 border-[#3B82F6] text-[#3B82F6] p-3.5 text-center transition-all duration-200 flex items-center justify-center gap-2 rounded-lg hover:scale-103 active:scale-95 font-poppins text-sm font-semibold drop-shadow-xl"
-        onClick={saveVCard}
+        // onClick={saveVCard}
+        onClick={() => window.location.href = "tel:+919876543210"}
       >
         <TfiDownload /> Save Contact
       </button>
