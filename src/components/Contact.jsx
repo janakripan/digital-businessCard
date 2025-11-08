@@ -3,10 +3,36 @@ import { contactLinks } from '../constants'
 import { TfiDownload } from 'react-icons/tfi'
 
 const Contact = () => {
+
+
+  const downloadVCard = () => {
+  const vcard =
+    `BEGIN:VCARD
+VERSION:3.0
+FN:Raffi Sacrosys
+EMAIL:raffi@sacrosys.com
+TEL:+919876543210
+ORG:Sacrosys
+TITLE:CEO
+END:VCARD`;
+
+  const blob = new Blob([vcard], { type: "text/vcard" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "raffisacrosys.vcf";
+  link.click();
+
+  URL.revokeObjectURL(url);
+};
+
   return (
     <div className="w-full h-fit flex flex-col gap-6 ">
         {/* save contact button  */}
-        <button className="w-full h-fit border-2 border-[#3B82F6] text-[#3B82F6] p-3.5 text-center transition-all duration-200 flex items-center justify-center gap-2 rounded-lg hover:scale-103 active:scale-95 font-poppins text-sm font-semibold drop-shadow-xl ">
+        <button className="w-full h-fit border-2 border-[#3B82F6] text-[#3B82F6] p-3.5 text-center transition-all duration-200 flex items-center justify-center gap-2 rounded-lg hover:scale-103 active:scale-95 font-poppins text-sm font-semibold drop-shadow-xl "
+         onClick={downloadVCard}
+        >
           <TfiDownload /> Save Contact
         </button>
 
