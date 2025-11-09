@@ -21,11 +21,12 @@ const Homepage = () => {
         </h3>
 
         <p className="text-[#4B5563] font-montserrat text-[14px] text-center  ">
-          Leading Sacrosys Technologies since 2001, I specialize in delivering
-          cutting-edge IT solutions across the Middle East. With over two
-          decades of expertise in digital transformation, cybersecurity, and
-          custom software development, I help organizations navigate the
-          evolving digital landscape with confidence and innovation.
+          As the CEO of Sacrosys Technologies, I’ve been driving innovation and
+          digital excellence across the Middle East since 2001. With over two
+          decades of experience, I specialize in digital transformation, custom
+          software development, cybersecurity, and enterprise IT solutions. My
+          mission is to help organizations scale securely, adopt emerging
+          technologies, and lead confidently in a connected world.
         </p>
       </div>
 
@@ -101,20 +102,21 @@ const Homepage = () => {
                 className="p-2 py-3 w-full flex flex-row gap-2.25 rounded-lg border-l-2 border-[#121212] shadow-[0px_2px_12px_0px_#3C3C3C3D] "
               >
                 <div className="w-7 h-full flex items-start justify-center">
-                    <img src={itm.image} alt="" className="w-full h-auto aspect-square"/>
-
+                  <img
+                    src={itm.image}
+                    alt=""
+                    className="w-full h-auto aspect-square"
+                  />
                 </div>
 
                 <div className="flex flex-col gap-2.25 ">
-                    <h5 className="font-bold text-sm text-[#121212] font-poppins capitalize ">
-                {itm.title}
-              </h5>
-              <p className=" w-full text-[12px] font-montserrat text-[#333333]   ">
-                {itm.desc}
-              </p>
-
+                  <h5 className="font-bold text-sm text-[#121212] font-poppins capitalize ">
+                    {itm.title}
+                  </h5>
+                  <p className=" w-full text-[12px] font-montserrat text-[#333333]   ">
+                    {itm.desc}
+                  </p>
                 </div>
-
               </div>
             ))}
           </div>
