@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import { RiRocketLine, RiTeamLine, RiTrophyLine } from "react-icons/ri";
+import { GoVerified } from "react-icons/go";
 import { products, services } from "../constants";
 
 const Homepage = () => {
@@ -42,7 +43,7 @@ const Homepage = () => {
             <RiTrophyLine />
           </div>
           <p className="text-[#3E3E3E] font-montserrat text-[12px]  ">
-            Lead company to 300% revenue growth
+           Spearheaded 300%+ revenue growth through innovation and strategic leadership
           </p>
         </div>
 
@@ -51,7 +52,7 @@ const Homepage = () => {
             <RiTeamLine />
           </div>
           <p className="text-[#3E3E3E] font-montserrat text-[12px]  ">
-            Built and managed teams of 5k+ professionals
+            Built and led a high-performing team of 500+ professionals and partner experts across regions
           </p>
         </div>
 
@@ -60,7 +61,16 @@ const Homepage = () => {
             <RiRocketLine />
           </div>
           <p className="text-[#3E3E3E] font-montserrat text-[12px]  ">
-            Successfully launched 20+ market-disrupting products
+            Delivered 20+ innovative IT and cybersecurity solutions transforming businesses across the Middle East
+          </p>
+        </div>
+        
+        <div className="w-full h-fit bg-[#F3F9FF] gap-3 rounded-lg p-2.75 flex flex-row items-center ">
+          <div className="flex items-center rounded-full bg-[#010724] text-white text-sm justify-center p-4 ">
+           <GoVerified />
+          </div>
+          <p className="text-[#3E3E3E] font-montserrat text-[12px]  ">
+            Expanded Sacrosys into a multi-domain IT powerhouse serving enterprise and government sectors
           </p>
         </div>
       </div>
